@@ -23,7 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
+import { WebView } from 'react-native-webview';
 const App: () => React$Node = () => {
   return (
     <>
@@ -38,6 +38,9 @@ const App: () => React$Node = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
+          <View style={{width:'100%',height:'100%'}}>
+              <WebView source={{ uri: 'http://10.71.55.225:3000/' }} />
+          </View>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
